@@ -1,23 +1,40 @@
 {
-   "author": "Mathieu Lescaudron",
-   "browser_action": {
-      "default_popup": "html/popup.html"
-   },
-  "background": {
-    "scripts": ["scripts/g4.js"]
+  "author": "Mathieu Lescaudron",
+  "browser_action": {
+    "default_popup": "html/popup.html"
   },
-   "content_scripts": [ {
-      "js": [ "scripts/jquery.js", "scripts/g4.js" ],
-      "matches": [ "http://www.spotlms.com/*", "https://www.spotlms.com/*" ]
-   } ],
-  "web_accessible_resources": ["scripts/g4-stop.js"],
-   "description": "Gagner du temps ;)",
-   "icons": {
-      "128": "images/icon128.png"
-   },
+  "background": {
+    "scripts": [
+      "scripts/g4.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/jquery.js",
+        "scripts/g4.js"
+      ],
+      "matches": [
+        "http://www.spotlms.com/*",
+        "https://www.spotlms.com/*",
+        "http://www.g-4.education/*",
+        "https://www.g-4.education/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "scripts/g4-stop.js"
+  ],
+  "description": "Gagner du temps ;)",
+  "icons": {
+    "128": "images/icon128.png"
+  },
   "manifest_version": 2,
-   "name": "Les 404 Spot LMS",
-   "permissions": [ "activeTab", "<all_urls>" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.1.1"
+  "name": "Les 404 Spot LMS",
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.1.1"
 }
